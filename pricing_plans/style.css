@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #92a8d1;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5rem;
+}
+
+#pricing-plans {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.pricing-plans-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1080px;
+  padding: 1.5rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.pricing-plans-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% / 3);
+  padding: 1rem;
+  border-radius: 5px;
+  /* background: yellow; */
+}
+
+.pricing-plans-item > img {
+  display: block;
+  width: 20%;
+  /* margin: 0 auto; */
+}
+
+.pricing-plans-item > p {
+  width: 80%;
+  text-align: center;
+}
+
+.pricing-plans-item h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #3f51b5;
+}
+
+.pricing-plans-item * {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.price-tag {
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 500;
+  color: #3f51b5;
+}
+
+.price-tag::before {
+  content: "$";
+  font-size: 0.85rem;
+  vertical-align: text-top;
+}
+
+.price-tag::after {
+  content: "/month";
+  font-size: 0.85rem;
+  vertical-align: baseline;
+}
+
+.pricing-plans-item h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  /* margin-top: 2rem;
+  margin-bottom: 2rem; */
+}
+
+.plan-description {
+  color: #808080;
+}
+
+.pricing-plans-item:hover {
+  background: #e9eef6;
+}
+
+@media (max-width: 700px) {
+  .pricing-plans-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pricing-plans-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;    
+  }
+}

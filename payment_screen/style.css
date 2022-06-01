@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #eeeeee;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.15rem;
+    background-image: url("assets/img/background.jpg");
+    background-size: cover;
+}
+
+.container {
+    width: 500px;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.slider_dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 2rem auto 2rem auto;
+    width: 50px;
+}
+
+#slider_dot_1,
+#slider_dot_2,
+#slider_dot_3 {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+}
+
+.active_slide {
+    background-color: #a9a9a9 !important;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.payment_system {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    border-top: 2px #f5f5f5 solid;
+}
+
+.check_mark {
+    display: block;
+    position: absolute;
+    height: 35px;
+    right: 2rem;
+}
+
+.payment_logo {
+    height: 50px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+:hover.payment_system {
+    background-color: #f5f5f5;
+}
+
+#next_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    /* padding: 1rem; */
+    background-color: blueviolet;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+p,
+#next_button {
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.payment_system p {
+    overflow: hidden;
+    color: #a9a9a9;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.checked {
+    color: #000000 !important;
+}
+
+#next_button p {
+    margin: 0;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+#next_button:active {
+    top: 2px;
+}
