@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 0;
+
+  background-image: url("img/background.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  font-family: "Roboto",
+    sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+
+.onboarding-pass {
+  width: 450px;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 6px;
+}
+
+.onboarding-pass__route {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+
+.abbr-big {  
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem;
+  line-height: 1em;
+  padding-bottom: 0.25rem;
+  color: #3b8acf;
+}
+
+.abbr-big-full {
+  color: #aaaaaa;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.onboarding-pass__route div:last-child {
+  text-align: right;
+}
+
+.onboarding-pass__route hr {
+  width: 10%;
+  height: 8px;
+  border: none;
+  background-color: #3b8acf;
+  opacity: 50%;
+}
+
+.onboarding-pass__flight-details-1,
+.onboarding-pass__flight-details-2 {
+  display: flex;
+}
+
+.onboarding-pass__flight-details-1 {
+  margin-bottom: 1.5rem;
+}
+
+.onboarding-pass__flight-details-2 {
+  justify-content: space-between;
+}
+
+.onboarding-pass__flight-details-1 > div {
+  width: calc(100% / 3);
+}
+
+.abbr-small {
+  color: #aaaaaa;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.25rem;
+}
+
+.onboarding-pass__flight-details-2 div div:nth-child(2) {
+  margin: 1.5rem 0;
+}
+
+.onboarding-pass__flight-details-2 img {
+  height: 165px;
+}
