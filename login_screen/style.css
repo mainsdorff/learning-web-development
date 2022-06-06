@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4d515d;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.login-container {
+  width: 1200px;
+  display: grid;
+  grid-template-areas: 
+    "signup-social img"
+    "singup-email img";
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 6fr 1fr;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 60em) {
+  .login-container {
+    grid-template-areas:
+      "signup-social signup-social"
+      "singup-email singup-email";
+    border-radius: 0;  
+  }
+}
+
+.signup-social {
+  grid-area: signup-social;
+  padding: 5rem;
+}
+
+.singup-email {
+  grid-area: singup-email;
+  padding: 2.5rem 5rem 0 5rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+.signup-email-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.signup-button-email-label {
+  font-weight: 700;
+}
+
+.signup-email-form .signup-button {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  width: auto;
+  height: auto;
+}
+
+.login-image {
+  grid-area: img;
+  background-image: url("img/side.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: .75rem;
+}
+
+.signup-subtitle {
+  color: #808080;
+  line-height: 1.5em;
+  margin-bottom: 5rem;
+}
+
+.signup-button {
+  display: block;
+  width: 100%;
+  position: relative;
+  height: 4.5rem;
+  background-color: transparent;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+
+  color: #808080;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.signup-social-form .signup-button {
+  transition-property: border-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.signup-social-form .signup-button:hover {
+  border-color: transparent;
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.1);;
+}
+
+.signup-email-form .signup-button {
+  transition-property: color;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.signup-email-form .signup-button:hover {
+  color: #000000;
+}
+
+.signup-button-google {
+  background-image: url("img/googleplus.svg");
+  background-repeat: no-repeat;
+  background-position: 1.5rem center;
+  background-size: 24px;
+}
+
+.signup-button-facebook {
+  background-image: url("img/facebook.svg");
+  background-repeat: no-repeat;
+  background-position: 1.5rem center;
+  background-size: 24px;
+}
+
+.signup-button-twitter {
+  background-image: url("img/twitter.svg");
+  background-repeat: no-repeat;
+  background-position: 1.5rem center;
+  background-size: 24px;
+}
