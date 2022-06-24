@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  background-color: #f7cd75;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  
+  width: 1000px;
+  height: 700px;
+  background-color: #ffffff;
+}
+
+.card__wallets {
+  width: 40%;
+  background-color: #eeeeee;
+  overflow-y: scroll;
+}
+
+.card__transactions {
+  width: 60%;
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+
