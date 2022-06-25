@@ -20,19 +20,66 @@ body {
   flex-direction: row;
   
   width: 1000px;
-  height: 700px;
+  height: 600px;
   background-color: #ffffff;
 }
 
-.card__wallets {
+:is(.wallets, .transactions) {
+  padding: 3rem;
+}
+
+.wallets {
   width: 40%;
   background-color: #eeeeee;
   overflow-y: scroll;
 }
 
-.card__transactions {
+.transactions {
   width: 60%;
   background-color: #ffffff;
   overflow-y: scroll;
 }
 
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .atm-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+} */
+
+.atm-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: auto;
+  aspect-ratio: 1.588 / 1;
+
+  margin-bottom: 2rem;
+  padding: 1rem;
+
+  background-color: #ffffff;
+  border: 2px solid #dcdcdc;
+  border-radius: 8px;
+}
+
+.atm-card__logo {
+  display: block;
+}
+
+.atm-card__number {
+  margin-bottom: .5rem;
+}
+
+.atm-card__expiration-date::before {
+  content: "Valid thru: ";
+}
