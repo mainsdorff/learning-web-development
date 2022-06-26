@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +15,8 @@ body {
   padding: 0;
   
   background-color: #f7cd75;
+
+  font-family: 'Roboto', sans-serif;
 }
 
 .card {
@@ -82,4 +86,73 @@ body {
 
 .atm-card__expiration-date::before {
   content: "Valid thru: ";
+}
+
+.transactions__records {
+  margin: 3rem 0;
+}
+
+.transactions__record {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  margin-bottom: 3rem;
+}
+
+.transactions__records > div:last-child {
+  margin-bottom: 0;
+
+  background-color: yellow;
+}
+
+.transactions__type {
+  display: block;
+  width: 25px;
+
+  margin-right: 1.5rem;
+  padding: .25rem;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 50%;
+}
+
+.transactions__description {
+  flex-grow: 1;
+}
+
+.transactions__title {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-bottom: .25em;
+}
+
+.transactions__meta {
+  margin: 0;
+  color: #a9a9a9;
+}
+
+.transactions__amount {
+  width: 15%;
+  text-align: right;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.transactions__amount_minus {
+  color: #8797c6;
+}
+
+.transactions__amount_plus {
+  color: #8ace5E;
+}
+
+.before-decimal-point::before {
+  content: "$";
+}
+
+.after-decimal-point {
+  vertical-align: super;
+  font-size: .75rem;
 }
