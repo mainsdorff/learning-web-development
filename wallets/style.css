@@ -38,6 +38,10 @@ body {
   overflow-y: scroll;
 }
 
+.add-wallet {
+  cursor: pointer;
+}
+
 .transactions {
   width: 60%;
   background-color: #ffffff;
@@ -51,13 +55,19 @@ body {
   align-items: center;
 }
 
-/* .atm-cards {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  gap: 2rem;
-} */
+.title-h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.current-balance {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+hr {
+  border-top: 1px solid #dcdcdc;
+}
 
 .atm-card {
   display: flex;
@@ -74,6 +84,18 @@ body {
   background-color: #ffffff;
   border: 2px solid #dcdcdc;
   border-radius: 8px;
+  outline: 3px solid rgba(135, 151, 198, 0);
+
+  transition: outline 150ms ease-out;
+}
+
+.atm-card_selected {
+  outline: 3px solid #8797c6;
+}
+
+.atm-card:hover {
+  outline: 3px solid #8797c6;
+  cursor: pointer;  
 }
 
 .atm-card__logo {
@@ -89,33 +111,30 @@ body {
 }
 
 .transactions__records {
-  margin: 3rem 0;
+  display: grid;
+  gap: 3rem;
+
+  margin-top: 3rem;
 }
 
 .transactions__record {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
   align-items: center;
-
-  margin-bottom: 3rem;
-}
-
-.transactions__records > div:last-child {
-  margin-bottom: 0;
-
-  background-color: yellow;
 }
 
 .transactions__type {
-  display: block;
+  text-align: left;
+}
+
+.transactions__type > img {
   width: 25px;
 
-  margin-right: 1.5rem;
   padding: .25rem;
 
-  border: 1px solid #dcdcdc;
+  border: 2px solid #dcdcdc;
   border-radius: 50%;
+  
 }
 
 .transactions__description {
@@ -134,10 +153,11 @@ body {
 }
 
 .transactions__amount {
-  width: 15%;
+  width: auto;
   text-align: right;
   font-size: 1.25rem;
   font-weight: 700;
+
 }
 
 .transactions__amount_minus {
@@ -155,4 +175,17 @@ body {
 .after-decimal-point {
   vertical-align: super;
   font-size: .75rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a9a9a9;
+  border-radius: 4px;
 }
