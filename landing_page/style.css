@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
-  --color-main: #000000;
-  --color-link-unvisited: #a9a9a9;
-  --color-link-visited: #a9a9a9;
-  --color-link-hover: var(--color-main);
-  --color-link-active: var(--color-main);
+  --color-primary: #000000;
+  --color-secondary: #a9a9a9;
+  --color-tetriary: #696969;
+  --color-accent-primary: #ea625c;
+  --color-accent-secondary: #ec726c;
+  --color-button-text: #ffffff;  
 }
 
 * {
@@ -18,36 +19,14 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Header */
+
 header,
-main {
-  max-width: 1200px;
-  min-width: 800px;
+.container-global {
+  max-width: 1400px;
+  min-width: 1200px;
   margin: 0 auto;
-}
-
-nav > ul {
-  list-style: none;
-}
-
-nav li {
-  display: inline-block;
-}
-
-nav a:link {
-  color: var(--color-link-unvisited);
-}
-
-nav a:visited {
-  color: var(--color-link-visited);
-}
-
-nav a:hover {
-  color: var(--color-link-hover);
-  border-bottom: 2px solid var(--color-main);
-}
-
-nav a:active {
-  color: var(--color-link-active);
+  padding: 2rem;
 }
 
 .header {
@@ -57,15 +36,92 @@ nav a:active {
   align-items: center;
 
   margin-top: 2rem;
-  padding: 1em 0;
-  
-  /* background-color: yellow; */
+}
+
+.menu {
+  list-style: none;
+  font-weight: 500;
 }
 
 .menu__item {
-  margin-left: 2em;
-  padding-bottom: .25em;
+  display: inline-block;
+  margin-left: 3em;
+  /* background-color: yellow; */
+}
 
-  font-weight: 500;
+.menu__link {
+  display: block;
+  color: var(--color-secondary);
   text-decoration: none;
+  padding: .25em 0;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 250ms ease, color 250ms ease;
+}
+
+.menu__link:hover {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.menu__help {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-tetriary);
+  padding-bottom: .25em;
+  border: none;
+  border-bottom: 1px solid var(--color-secondary);
+  width: 200px;
+}
+
+.menu__help:focus {
+  outline: none;
+}
+
+.menu__help::placeholder {
+  color: var(--color-secondary);
+}
+
+/* Cover Section */
+
+.cover {
+  min-height: 80vh;
+  min-width: 800px;
+  background-image: url("img/watches.jpg");
+  background-repeat: no-repeat;
+  background-position: top right -35%;
+}
+
+.cover__content {
+  max-width: 54ch;
+  margin-top: 5rem;
+}
+
+.title-h1 {
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  color: var(--color-tetriary);
+  line-height: 1.75em;
+  padding: .25em 2.5em;
+  margin-bottom: 3rem;
+  border-left: 3px solid var(--color-tetriary);
+}
+
+.button {
+  display: block;
+  width: max-content;
+  padding: 1.25em 1.5em;
+  background-color: var(--color-accent-primary);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-button-text);
+  transition: background-color 250ms ease;
+}
+
+.button:hover {
+  background-color: var(--color-accent-secondary);
 }
