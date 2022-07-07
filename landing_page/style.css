@@ -95,12 +95,12 @@ header,
 }
 
 .cover__content {
-  max-width: 54ch;
+  max-width: 72ch;
   margin-top: 5rem;
 }
 
 .title-h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -198,4 +198,47 @@ header,
   background-color: #ffffff;
 }
 
+.main-feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 3rem;
+}
 
+.main-feature__content {
+  width: 40%;
+  margin-top: 8rem;
+  margin-right: 15%;
+  
+}
+
+.main-feature > img {
+  display: block;
+  height: 75vh;
+}
+
+/* Footer */
+
+.footer {
+  min-height: 85vh;
+  background-image: url("img/runners.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 3rem;
+}
+
+.footer__content {
+  width: 54ch;
+  margin-top: 8rem;
+  margin-left: 55%;
+}
+
+.footer__content > :is(.title-h1, .subtitle) {
+  color: #ffffff;
+}
+
+.footer__content> .subtitle {
+  color: #ffffff;
+  border-left: 3px solid #ffffff !important; 
+}
