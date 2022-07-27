@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
+:root {
+  --global-width: 1200px;
+  --toggler-size: 120px;
+  --arrow-size: 15px;
+  --color-accent: #de8a89;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9,14 +16,15 @@ body {
   margin: 0;
   padding: 0;  
   font-family: "Roboto", sans-serif;
-  background-color: #de8a89;
+  font-size: 1.25rem;
+  background-color: var(--color-accent);
   overflow: hidden;
 }
 
 .root {
-  width: 1200px;
+  width: var(--global-width);
   margin: 0 auto;
-  background-color: #ffffff;  
+  /* background-color: #ffffff;   */
 }
 
 .fabric_types > ul {
@@ -30,3 +38,100 @@ body {
   font-weight: 900;
   text-transform: uppercase;
 }
+
+.recommendation {
+  width: 60%;
+  margin-bottom: 5rem;
+}
+
+.control_panel {
+  position: relative;
+  height: calc(var(--global-width)/3);
+  background-color: #201e1f;
+}
+
+.settings {
+  height: 100%;
+  display: flex;
+  flex-flow: row;
+  align-items: stretch;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.setting__description {
+  padding-left: 3.5rem;
+}
+
+.setting__name {
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.setting__value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.setting_timer {
+  background-color: rgba(255, 255, 255, 0.10);
+}
+
+.setting_temperature {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.setting_load {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.toggler {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  width: var(--toggler-size);
+  height: var(--toggler-size);
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.toggler_left {
+  top: 0;
+  left: calc(var(--toggler-size) * -1);
+}
+
+.toggler_right {
+  top: 0;
+  right: calc(var(--toggler-size) * -1);;
+}
+
+.arrow-left {
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  border: calc(var(--arrow-size) / 2) solid transparent;
+  border-right-color: #201e1f;
+  opacity: 0.5;
+}
+
+.arrow-right {
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  border: calc(var(--arrow-size) / 2) solid transparent;
+  border-left-color: #201e1f;
+  opacity: 0.5;
+}
+
+
+
+
